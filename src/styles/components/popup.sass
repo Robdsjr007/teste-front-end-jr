@@ -1,0 +1,104 @@
+@use '../mixins'
+@use '../variables'
+
+
+.popup
+        @include mixins.flexContent(flex, space-between, flex-start)
+        @include mixins.widthAndHeight(769px, 299.26px)
+        background-color: white
+        animation-name: fadeIn
+        animation-duration: 0.5s
+
+        @keyframes fadeIn 
+            0% 
+                opacity: 0
+
+            100% 
+                opacity: 1
+            
+        .imagem
+            @include mixins.flexContent(flex, center, center)
+            @include mixins.widthAndHeight(calc( 100% / 2 ), 100%)
+            
+
+        .maisInfo
+            @include mixins.flexContent(flex, flex-start, flex-start)
+            flex-direction: column
+            @include mixins.widthAndHeight(calc( 100% / 2 ), 100%)
+            color: variables.$title-modal
+            
+            .fechar
+                position: relative
+                top: 16.86px
+                left: calc( 100% -  40px) 
+                @include mixins.widthAndHeight(16.16px, 13.54px)
+
+                button
+                    @include mixins.widthAndHeight(max-content, max-content)
+                    background-color: white
+                    border: none
+                    transition: 0.2s ease-in-out
+
+                    &:hover
+                        cursor: pointer
+                        transform: scale(1.1)
+                
+                
+                    img
+                        @include mixins.widthAndHeight(16.16px, 13.54px)
+                    
+            h1
+                @include mixins.fontHeading('Lato-Regular', 1.25rem)
+                font-weight: 400
+                line-height: 100%
+                letter-spacing: 5%
+                margin-top: 28px
+
+            
+            h4
+                @include mixins.fontHeading('Lato-Black', 1.25rem)
+                font-weight: bold
+                margin-top: 21px
+                margin-bottom: 18px
+            
+            p
+                @include mixins.fontHeading('Lato-Regular', 0.625rem)
+                font-weight: 400
+                color: variables.$desc-modal
+                line-height: 150.5%
+                letter-spacing: 5%
+                margin-bottom: 25px
+            
+            a
+                @include mixins.fontHeading('Lato-Regular', 0.75rem)
+                font-weight: 400
+                color: variables.$title-modal
+            
+            .counter
+                @include mixins.flexContent(flex, space-around, center)
+                @include mixins.widthAndHeight(110px, 36px)
+                color: variables.$title-modal
+                border: 1px solid variables.$title-modal
+                border-radius: 5px
+                margin-block: 16px
+
+                p
+                    color: variables.$title-modal
+                    @include mixins.fontHeading('Mountserrat', 1rem)
+                    margin-bottom: 0
+                
+                button
+                    border: none
+                    background-color: white
+                    @include mixins.fontHeading('sans-serif', 1.3rem)
+                    font-weight: bold
+                    color: variables.$title-modal
+                    &:hover
+                        cursor: pointer
+
+            .btn-comprar
+                border-radius: 4px
+                    
+                    
+
+                

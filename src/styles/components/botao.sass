@@ -1,0 +1,11 @@
+@use '../mixins'
+@use '../variables'
+
+.btn-comprar
+    @include mixins.flexContent(flex, center, center)
+    @include mixins.widthAndHeight(245px, 44px)
+    @include mixins.fontHeading('Poppins-Bold', 0.875rem)
+    color: white
+    background-color: variables.$rosa-primario
+    margin-bottom: 16px
+    border: none

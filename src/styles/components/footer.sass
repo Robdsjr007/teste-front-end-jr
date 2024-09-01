@@ -1,0 +1,159 @@
+@use '../mixins'
+@use '../variables'
+
+footer
+    @include mixins.widthAndHeight(100%, 396px)
+    background-color: variables.$bg-footer
+
+    .container1
+        @include mixins.flexContent(flex, flex-start, flex-start)
+        @include mixins.widthAndHeight(100%, 325px)
+        border: 1px solid white
+
+        .area
+            margin-top: 59px
+            border: 1px solid black
+            color: white
+
+            h4
+                @include mixins.fontHeading('Poppins-Bold', 0.8125rem)
+
+            ul
+                li
+                    @include mixins.fontHeading('Poppins-Light', 0.75rem)
+                    font-weight: lighter
+
+        .sobre
+            @include mixins.flexContent(flex, flex-start, flex-start)
+            flex-direction: column
+            margin-inline: 92.87px
+
+            ul
+                @include mixins.widthAndHeight(145.8px, 128px)
+                line-height: 32px
+                margin-block: 27px
+
+
+            .redes
+                @include mixins.widthAndHeight(129.82px, 22px)
+                @include mixins.flexContent(flex, space-between, center)
+
+        .informacoes
+            margin-right: 46.93px
+
+            ul
+                @include mixins.widthAndHeight(149.79px, 192px)
+                line-height: 32px
+                margin-top: 24px
+
+            
+
+        .pagamentos            
+            @include mixins.widthAndHeight(194.73px, 192.55px)
+            margin-right: 241.67px
+
+            ul
+                display: flex
+                justify-content: space-between
+
+            .lista1
+                margin-top: 24px
+                margin-bottom: 19px
+            
+            .lista3
+                margin-top: 15px
+                margin-bottom: 14px
+
+
+            .visa
+                @include mixins.widthAndHeight(43.93px, 15.54px)
+                
+            .elo
+                @include mixins.widthAndHeight(43.93px, 20.77px)
+                    
+            .alelo
+                @include mixins.widthAndHeight(38.95px, 25.49px)
+                
+            .dinners
+                @include mixins.widthAndHeight(55.92px, 14.51px)
+                
+            .ifood
+                @include mixins.widthAndHeight(40.94px, 21.7px)
+                
+            .mastercard
+                @include mixins.widthAndHeight(37.23px, 29px)
+                
+            .pix
+                @include mixins.widthAndHeight(54.92px, 19.55px)
+
+            .amex
+                @include mixins.widthAndHeight(31.96px, 30.31px)
+
+            .ticket
+                @include mixins.widthAndHeight(28.96px, 29px)
+                
+            .sodexo
+                @include mixins.widthAndHeight(47.93px, 15.55px)
+
+        .cardForm
+            position: relative
+            top: 33px
+            right: 92.87px
+            @include mixins.flexContent(flex, center, center)
+            @include mixins.widthAndHeight(379.47px, 260px)
+            background-color: white
+            border-radius: 10px
+
+            form
+                @include mixins.MaxWidthAndMaxHeight(379.47px, 260px)
+
+                h1
+                    @include mixins.MaxWidthAndMaxHeight(280.61px, 51px)
+                    @include mixins.fontHeading('Poppins-Light', 1.125rem)
+                    line-height: 26px
+                    font-weight: lighter
+
+                    span
+                        @include mixins.fontHeading('Poppins-Bold', 1.3125rem)
+                        color: black !important
+
+                p
+                    @include mixins.MaxWidthAndMaxHeight(309.57px, 38px)
+                    @include mixins.fontHeading('Poppins-Light', 0.75rem)
+                    text-align: center
+                    margin-top: 15px
+                    margin-bottom: 31px
+
+                div
+                    input
+                        @include mixins.widthAndHeight(229.68px, 45px)
+                        border: 1px solid #2A2A2A
+                        padding-left: 24.97px
+                        margin-right: 8.99px
+                        border-radius: 4px
+                        &::placeholder
+                            color: variables.$gray4
+
+                    button
+                        @include mixins.widthAndHeight(61.91px, 45px)
+                        background-color: variables.$rosa-primario
+                        color: white
+                        border: none
+
+    .container2
+        @include mixins.flexContent(flex, flex-start, center)
+        @include mixins.widthAndHeight(100%, 70px)
+    
+        p
+            text-transform: uppercase
+            @include mixins.MaxWidthAndMaxHeight(698px, 26px)
+            @include mixins.fontHeading('Poppins-Regular', 0.625rem)            
+            line-height: 13px
+            color: white
+            margin-left: 92.87px
+            margin-right: 238px
+
+        .empresas
+            @include mixins.flexContent(flex, space-between, center)
+            @include mixins.widthAndHeight(226.08px, 32px)
+            

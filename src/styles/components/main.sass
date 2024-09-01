@@ -1,0 +1,84 @@
+@use '../variables'
+@use '../mixins'
+
+main
+    @include mixins.widthAndHeight(100% , 2658px)
+    .banner
+        @include mixins.flexContent(flex, center, flex-start)
+        flex-direction: column
+        @include mixins.widthAndHeight(100% , 395px)
+        background: linear-gradient(to top, black, #00000000), url('./img/banner.png')
+        
+        h1, h3, a
+            margin-left: 86px
+            max-width: 587px
+            color: white
+        
+        h3
+            margin-block: 26px
+        
+        a
+            @include mixins.flexContent(flex, center, center)
+            @include mixins.fontHeading('Poppins-Semibold', 1.125rem)
+            @include mixins.widthAndHeight(227px, 60px)
+            text-align: center
+            background-color: variables.$rosa-primario
+    
+    .containerCategorias
+                @include mixins.flexContent(flex, center, center)
+                @include mixins.widthAndHeight(100% , 174px)
+                margin: 34px 0 39px
+
+                .categoriasOnScreen
+                    @include mixins.flexContent(flex, space-between, center)
+                    @include mixins.widthAndHeight(1277px , 100%)
+            
+        
+    section
+        @include mixins.flexContent(flex, flex-start, center)
+        flex-direction: column
+        
+        .containerCardMercadoria
+            @include mixins.flexContent(flex, space-around, center)
+            @include mixins.widthAndHeight(100% , auto)
+            margin-bottom: 70px
+
+
+        .containerCardParceiro
+            @include mixins.flexContent(flex, space-between, center)
+            gap: 122px
+        
+        .containerCardProduto
+            @include mixins.flexContent(flex, space-between, center)
+            gap: 90px
+
+        p
+            @include mixins.fontHeading('Poppins-Bold', 0.9375rem)
+
+        .containerMarcas
+            @include mixins.flexContent(flex, flex-start, center)
+            flex-direction: column
+            @include mixins.widthAndHeight(1250px, 331px)
+            h4
+                color: variables.$rosa-primario
+                margin-bottom: 52px
+            .marcas
+                @include mixins.flexContent(flex, space-between, center)
+                gap: 40px
+                @include mixins.widthAndHeight(1250px, 234px)
+            
+            .setaRight
+                    position: relative
+                    z-index: 2
+                    right: 110px
+                    @include mixins.MinWidthAndMinHeight(56px, 56px)
+                    background-color: white
+                    border-radius: 100%
+                    border: none
+                    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.18)        
+    
+
+  
+
+
+

@@ -1,0 +1,32 @@
+@use '../variables'
+@use '../mixins'
+
+.cardParceiro
+    @include mixins.flexContent(flex, flex-end, flex-start)
+    flex-direction: column
+    @include mixins.widthAndHeight(574px, 350px)
+    color: white
+    background: linear-gradient(to top, black, #00000000), url('./img/parceiro.png')
+    padding-inline: 40px
+    border-radius: 20px
+    margin-bottom: 53px
+    
+    h1
+        font-size: 2.5rem
+        margin-bottom: 8px
+    
+    p
+        @include mixins.fontHeading('Poppins-Regular', 1rem)
+        @include mixins.MaxWidthAndMaxHeight(181px, 48px)
+        
+        margin-bottom: 32px
+    
+    a
+        @include mixins.flexContent(flex, center, center)
+        @include mixins.widthAndHeight(131px, 48px)
+        @include mixins.fontHeading('Poppins-Bold', 1rem)
+        color: white
+        background-color: variables.$rosa-primario
+        border-radius: 10px
+        margin-bottom: 43px
+        

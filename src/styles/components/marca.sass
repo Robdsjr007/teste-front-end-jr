@@ -1,0 +1,11 @@
+@use '../mixins'
+
+.marca
+    @include mixins.flexContent(flex, center, center)
+    @include mixins.MinWidthAndMinHeight(211px, 211px)
+    border-radius: 100%
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.13)
+    
+    img 
+        @include mixins.widthAndHeight(172px, 62.66px)
+    

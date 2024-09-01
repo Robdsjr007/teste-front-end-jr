@@ -1,0 +1,83 @@
+@use '../variables'
+@use '../mixins'
+
+header
+    @include mixins.flexContent(flex, center, center)
+
+    nav
+        @include mixins.widthAndHeight(1280px, 148px)
+
+    .container1
+        @include mixins.flexContent(flex, space-around, center)
+        @include mixins.widthAndHeight(100%, 32px)
+
+        .ofertas
+            @include mixins.flexContent(flex, space-between, center)
+            @include mixins.widthAndHeight(764px, 20px)
+            
+            li
+                img
+                    @include mixins.widthAndHeight(20px, 100%)
+                    margin-right: 9px
+                
+    .container2
+        @include mixins.flexContent(flex, space-around, center)
+        @include mixins.widthAndHeight(100%, 72px)
+        border-block: 1px solid #F0F0F0
+
+        .logo
+            @include mixins.widthAndHeight(139px , 50.65px)
+
+
+        label
+            @include mixins.flexContent(flex, center, center)
+            @include mixins.widthAndHeight(625px , 48px)
+            padding-inline: 16px
+            border-radius: 10px
+            background-color: variables.$bg-gray
+            
+            input
+                @include mixins.widthAndHeight(629px , 3.3em)
+                border: none
+                background-color: variables.$bg-gray
+                &:focus
+                    outline: none
+                &::placeholder
+                    @include mixins.fontHeading('Poppins-Medium' , 0.875rem)
+                    color: variables.$gray1
+            img
+                @include mixins.widthAndHeight(28px , 28px)
+
+        .icons 
+            @include mixins.flexContent(flex, space-between, center)
+            @include mixins.widthAndHeight(216px , 33px)
+
+            .cart, .avatar, .heart
+                @include mixins.widthAndHeight(32px , 32px)
+            .box 
+                @include mixins.widthAndHeight(24px , 24px)
+
+
+    .container3
+        @include mixins.flexContent(flex, center, center)
+        @include mixins.widthAndHeight(100%, 40px)
+
+        .lista-categorias
+            @include mixins.flexContent(flex, space-between, center)
+            @include mixins.widthAndHeight(1141px, 20px)
+            
+            li
+                text-align: center
+                &:hover
+                    cursor: pointer
+                    transition: 0.3s ease-in-out
+                    color: variables.$rosa-primario
+                img
+                    @include mixins.widthAndHeight(20px, 100%)
+                    margin-right: 9px
+    li
+        @include mixins.flexContent(flex, center, center)
+        color: variables.$gray1
+        font-family: 'Poppins-semibold'
+        cursor: pointer
+

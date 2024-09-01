@@ -1,0 +1,57 @@
+@use 'variables'
+@use 'mixins'
+
+// Poppins
+
+@include mixins.fontFace('Poppins' , 'Light')
+
+@include mixins.fontFace('Poppins' , 'Medium')
+
+@include mixins.fontFace('Poppins' , 'Regular')
+
+@include mixins.fontFace('Poppins' , 'SemiBold')
+
+@include mixins.fontFace('Poppins' , 'Bold')
+
+// Lato
+
+@include mixins.fontFace('Lato' , 'Regular')
+
+@include mixins.fontFace('Lato', 'Black')
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+    
+h1
+    @include mixins.fontHeading('Poppins-Semibold', 3rem)
+
+h2
+    @include mixins.fontHeading('Poppins-Bold', 2.5rem)
+
+h3
+    @include mixins.fontHeading('Poppins-Semibold', 2.25rem)
+
+h4
+    @include mixins.fontHeading('Poppins-Bold', 1.875rem)
+
+ul
+    list-style: none
+    text-decoration: none
+
+li
+    font-size: 0.75rem
+
+
+span
+    color: variables.$rosa-primario
+
+a
+    text-decoration: none
+
+.active
+    background-color: #FFFFFF !important
+    color: variables.$rosa-primario

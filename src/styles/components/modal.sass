@@ -1,0 +1,13 @@
+@use '../mixins'
+    
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    @include mixins.widthAndHeight(100%, 100%)
+    background-color: #00000036
+    @include mixins.flexContent(flex, center, center)
+    z-index: 1000
+
+        
+    

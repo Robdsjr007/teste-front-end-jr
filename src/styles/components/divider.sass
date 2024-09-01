@@ -1,0 +1,16 @@
+@use '../mixins'
+@use '../variables'
+
+.titleh4
+        @include mixins.flexContent(flex, center, center )
+        @include mixins.widthAndHeight(1138px, 45px)
+        margin-bottom: 4px
+
+        h4
+            margin: 0 34px 0
+            color: variables.$rosa-primario
+    
+        .line
+            @include mixins.widthAndHeight(360px, 1px)
+            background-color: variables.$line
+  
