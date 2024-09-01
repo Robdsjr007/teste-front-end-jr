@@ -1,4 +1,4 @@
-# \[VTEX\]
+# \[EconverseAG\]
 
 Uma aplicação frontend efetuada em processo seletivo
 
